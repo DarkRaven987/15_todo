@@ -1,4 +1,9 @@
 .TaskElement{
-    background-color: darkcyan;
+    background-color: #104242;
     color: aqua;
+}
+
+.TaskIsDone{
+    background-color: #156969;
+
 }
