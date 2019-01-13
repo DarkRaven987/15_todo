@@ -5,9 +5,11 @@ import Dashboard from './components/Dashboard';
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid" style={{backgroundColor: 'red'}}>
+      <div className="container-fluid">
           <Header/>
-          <Dashboard/>
+          <div className='container'>
+              <Dashboard/>
+          </div>
       </div>
     );
   }
