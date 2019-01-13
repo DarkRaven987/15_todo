@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt, faCheck } from '@fortawesome/free-solid-svg-icons'
+import _ from 'lodash';
 
 import Tasks from '../../tasks/tasks';
 
@@ -26,9 +27,11 @@ class Dashboard extends React.Component {
 
     onRemoveTaskHandler = (id) => {
         console.log("Deleted! ",id);
-        const {tasks} = this.state;
+        let {tasks} = this.state;
 
-
+        _.remove(tasks, (task) => {
+            return task.id == id;
+        })
 
         this.setState({
             tasks: tasks
